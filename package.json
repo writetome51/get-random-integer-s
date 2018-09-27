@@ -1,0 +1,20 @@
+{
+  "name": "@writetome51/get-random-integer-s",
+  "version": "1.0.0",
+  "description": "2 functions: one gives you 1 random integer within a chosen range, the other gives you many.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "numbers",
+    "random",
+    "integers"
+  ],
+  "author": "Steve Thompson",
+  "license": "FREE",
+  "dependencies": {
+    "@writetome51/get-rounded-up-down": "latest",
+    "basic-data-handling": "latest"
+  }
+}

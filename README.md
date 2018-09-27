@@ -1,0 +1,1 @@
+2 functions: one gives you 1 random integer within a chosen range, the other gives you many.
