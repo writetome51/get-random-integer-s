@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-random-integer-s",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "2 functions: one gives you 1 random integer within a chosen range, the other gives you many.",
   "main": "",
   "scripts": {
@@ -15,6 +15,8 @@
   "license": "FREE",
   "dependencies": {
     "@writetome51/get-rounded-up-down": "latest",
-    "basic-data-handling": "latest"
+    "@writetome51/number-analysis-basic": "latest",
+    "basic-data-handling": "latest",
+    "error-if-not-populated-array": "latest"
   }
 }
