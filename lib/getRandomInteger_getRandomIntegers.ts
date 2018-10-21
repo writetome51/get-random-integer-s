@@ -1,13 +1,12 @@
-import { getRoundedDown } 
-	from '@writetome51/get-rounded-up-down/getRounded_getRoundedDown_getRoundedUp';
-import {errorIfNotIntegerZeroOrGreater} from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
-import {isInteger} from 'basic-data-handling/isInteger_isFloat';
-import {errorIfNotPopulatedArray} from 'error-if-not-populated-array';
+import { isInteger } from 'basic-data-handling/isInteger_isFloat';
+import { getRoundedDown } from '@writetome51/get-rounded-up-down';
+import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
+import { errorIfNotPopulatedArray } from 'error-if-not-populated-array';
 
 
 export function getRandomInteger(range: [number, number]): number {
 	errorIfNotPopulatedArray(range);
-	if (isInteger(range[0]) && isInteger(range[1])){
+	if (isInteger(range[0]) && isInteger(range[1])) {
 		let min = range[0];
 		let max = range[1];
 		if (min > max) {
