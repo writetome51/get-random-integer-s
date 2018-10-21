@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/get-random-integer-s.git"
+  },
   "keywords": [
     "numbers",
     "random",
@@ -13,6 +17,10 @@
   ],
   "author": "Steve Thompson",
   "license": "FREE",
+  "bugs": {
+    "url": "https://github.com/writetome51/get-random-integer-s/issues"
+  },
+  "homepage": "https://github.com/writetome51/get-random-integer-s#readme",
   "dependencies": {
     "basic-data-handling": "latest",
     "@writetome51/get-rounded-up-down": "latest",
