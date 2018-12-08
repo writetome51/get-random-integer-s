@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-random-integer-s",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "2 functions: one gives you 1 random integer within a chosen range, the other gives you many.",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/writetome51/get-random-integer-s#readme",
   "dependencies": {
-    "basic-data-handling": "latest",
-    "@writetome51/get-rounded-up-down": "latest",
-    "@writetome51/in-range": "latest",
-    "error-if-not-populated-array": "latest"
+    "basic-data-handling": "~1.0.13",
+    "@writetome51/get-rounded-up-down": "~1.0.7",
+    "@writetome51/in-range": "~1.0.2",
+    "error-if-not-populated-array": "~1.0.1"
   }
 }
