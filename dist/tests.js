@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var getRandomInteger_getRandomIntegers_1 = require("./getRandomInteger_getRandomIntegers");
+var index_1 = require("./index");
 var in_range_1 = require("@writetome51/in-range");
 // Test 1: Make sure an error is triggered if you pass something other than an array:
 var errorTriggered = false;
 try {
-    var result = getRandomInteger_getRandomIntegers_1.getRandomInteger('10');
+    var result = index_1.getRandomInteger('10');
 }
 catch (e) {
     errorTriggered = true;
@@ -17,19 +17,19 @@ else
 // Test 2: Make sure error is triggered if array items are not both numbers:
 var errorsTriggered = 0;
 try {
-    var result = getRandomInteger_getRandomIntegers_1.getRandomInteger([-1, '']);
+    var result = index_1.getRandomInteger([-1, '']);
 }
 catch (e) {
     ++errorsTriggered;
 }
 try {
-    var result = getRandomInteger_getRandomIntegers_1.getRandomInteger([-1, '4']);
+    var result = index_1.getRandomInteger([-1, '4']);
 }
 catch (e) {
     ++errorsTriggered;
 }
 try {
-    var result = getRandomInteger_getRandomIntegers_1.getRandomInteger([false, '1']);
+    var result = index_1.getRandomInteger([false, '1']);
 }
 catch (e) {
     ++errorsTriggered;
@@ -41,7 +41,7 @@ else
 // Test 3: Make sure error is triggered if first number is greater than the second:
 errorTriggered = false;
 try {
-    var result = getRandomInteger_getRandomIntegers_1.getRandomInteger([0, -1]);
+    var result = index_1.getRandomInteger([0, -1]);
 }
 catch (e) {
     errorTriggered = true;
@@ -55,7 +55,7 @@ var randomIntegers = [], i = -1;
 var results = [];
 var iterations = 4000;
 while (++i < iterations) {
-    randomIntegers.push(getRandomInteger_getRandomIntegers_1.getRandomInteger([i, i + 9]));
+    randomIntegers.push(index_1.getRandomInteger([i, i + 9]));
 }
 i = -1;
 while (++i < iterations) {
@@ -66,7 +66,7 @@ if (results.length === iterations && !results.includes(false) && !results.includ
 else
     console.log('test 4 failed');
 // Test 5: Make sure getRandomIntegers returns integers in requested range:
-randomIntegers = getRandomInteger_getRandomIntegers_1.getRandomIntegers(100, [99, 100]);
+randomIntegers = index_1.getRandomIntegers(100, [99, 100]);
 i = -1;
 results = [];
 while (++i < randomIntegers.length) {
@@ -77,7 +77,7 @@ if (results.length === randomIntegers.length && !results.includes(false) && !res
 else
     console.log('test 5 FAILED');
 // Test 6: Make sure getRandomIntegers returns integers in requested range:
-randomIntegers = getRandomInteger_getRandomIntegers_1.getRandomIntegers(100, [-100, 100]);
+randomIntegers = index_1.getRandomIntegers(100, [-100, 100]);
 i = -1;
 results = [];
 while (++i < randomIntegers.length) {
@@ -88,7 +88,7 @@ if (results.length === randomIntegers.length && !results.includes(false) && !res
 else
     console.log('test 6 FAILED');
 // Test 6: Make sure getRandomIntegers returns integers in requested range:
-randomIntegers = getRandomInteger_getRandomIntegers_1.getRandomIntegers(10, [-1000000, Number.MAX_VALUE]);
+randomIntegers = index_1.getRandomIntegers(10, [-1000000, Number.MAX_VALUE]);
 i = -1;
 results = [];
 while (++i < randomIntegers.length) {

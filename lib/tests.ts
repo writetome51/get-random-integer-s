@@ -1,4 +1,4 @@
-import { getRandomInteger, getRandomIntegers } from './getRandomInteger_getRandomIntegers';
+import { getRandomInteger, getRandomIntegers } from './index';
 import { inRange } from '@writetome51/in-range';
 
 

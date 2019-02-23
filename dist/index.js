@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var isInteger_isFloat_1 = require("basic-data-handling/isInteger_isFloat");
-var get_rounded_up_down_1 = require("@writetome51/get-rounded-up-down");
 var errorIfNotIntegerZeroOrGreater_1 = require("basic-data-handling/errorIfNotIntegerZeroOrGreater");
 var error_if_not_populated_array_1 = require("error-if-not-populated-array");
+var get_rounded_up_down_1 = require("@writetome51/get-rounded-up-down");
 function getRandomInteger(range) {
     error_if_not_populated_array_1.errorIfNotPopulatedArray(range);
     if (isInteger_isFloat_1.isInteger(range[0]) && isInteger_isFloat_1.isInteger(range[1])) {

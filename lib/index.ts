@@ -1,7 +1,7 @@
 import { isInteger } from 'basic-data-handling/isInteger_isFloat';
-import { getRoundedDown } from '@writetome51/get-rounded-up-down';
 import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
 import { errorIfNotPopulatedArray } from 'error-if-not-populated-array';
+import { getRoundedDown } from '@writetome51/get-rounded-up-down';
 
 
 export function getRandomInteger(range: [number, number]): number {
