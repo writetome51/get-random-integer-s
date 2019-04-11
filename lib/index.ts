@@ -1,14 +1,13 @@
-import { isInteger } from 'basic-data-handling/isInteger_isFloat';
-import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
+import { errorIfNotIntegerZeroOrGreater } from 'error-if-not-integer-zero-or-greater';
 import { errorIfNotPopulatedArray } from 'error-if-not-populated-array';
 import { getRoundedDown } from '@writetome51/get-rounded-up-down';
+import { isInteger } from '@writetome51/is-integer-is-float';
 
 
-export function getRandomInteger(range: [number, number]): number {
-	errorIfNotPopulatedArray(range);
-	if (isInteger(range[0]) && isInteger(range[1])) {
-		let min = range[0];
-		let max = range[1];
+export function getRandomInteger([min, max]): number {
+	errorIfNotPopulatedArray(arguments[0]);
+
+	if (isInteger(min) && isInteger(max)) {
 		if (min > max) {
 			throw new Error('In the range array, the first number must be less than or' +
 				' equal to the second number');
@@ -20,12 +19,12 @@ export function getRandomInteger(range: [number, number]): number {
 }
 
 
-export function getRandomIntegers(howMany, range: [number, number]): number[] {
+export function getRandomIntegers(howMany, [min, max]): number[] {
 	let randomIntegers = [];
 	errorIfNotIntegerZeroOrGreater(howMany);
 
 	for (let i = 0; i < howMany; ++i) {
-		let intWithinRange = getRandomInteger(range);
+		let intWithinRange = getRandomInteger([min, max]);
 		randomIntegers.push(intWithinRange);
 	}
 	return randomIntegers;

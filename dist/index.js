@@ -1,14 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var isInteger_isFloat_1 = require("basic-data-handling/isInteger_isFloat");
-var errorIfNotIntegerZeroOrGreater_1 = require("basic-data-handling/errorIfNotIntegerZeroOrGreater");
+var error_if_not_integer_zero_or_greater_1 = require("error-if-not-integer-zero-or-greater");
 var error_if_not_populated_array_1 = require("error-if-not-populated-array");
 var get_rounded_up_down_1 = require("@writetome51/get-rounded-up-down");
-function getRandomInteger(range) {
-    error_if_not_populated_array_1.errorIfNotPopulatedArray(range);
-    if (isInteger_isFloat_1.isInteger(range[0]) && isInteger_isFloat_1.isInteger(range[1])) {
-        var min = range[0];
-        var max = range[1];
+var is_integer_is_float_1 = require("@writetome51/is-integer-is-float");
+function getRandomInteger(_a) {
+    var min = _a[0], max = _a[1];
+    error_if_not_populated_array_1.errorIfNotPopulatedArray(arguments[0]);
+    if (is_integer_is_float_1.isInteger(min) && is_integer_is_float_1.isInteger(max)) {
         if (min > max) {
             throw new Error('In the range array, the first number must be less than or' +
                 ' equal to the second number');
@@ -20,11 +19,12 @@ function getRandomInteger(range) {
         throw new Error('Both items in the range array must be integers');
 }
 exports.getRandomInteger = getRandomInteger;
-function getRandomIntegers(howMany, range) {
+function getRandomIntegers(howMany, _a) {
+    var min = _a[0], max = _a[1];
     var randomIntegers = [];
-    errorIfNotIntegerZeroOrGreater_1.errorIfNotIntegerZeroOrGreater(howMany);
+    error_if_not_integer_zero_or_greater_1.errorIfNotIntegerZeroOrGreater(howMany);
     for (var i = 0; i < howMany; ++i) {
-        var intWithinRange = getRandomInteger(range);
+        var intWithinRange = getRandomInteger([min, max]);
         randomIntegers.push(intWithinRange);
     }
     return randomIntegers;
