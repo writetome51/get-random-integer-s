@@ -1,10 +1,10 @@
-import { errorIfNotIntegerZeroOrGreater } from 'error-if-not-integer-zero-or-greater';
-import { errorIfLengthIsZero } from 'error-if-length-is-zero';
-import { getRoundedDown } from '@writetome51/get-rounded-up-down';
-import { isInteger } from '@writetome51/is-integer-is-float';
+import {errorIfNotIntegerZeroOrGreater} from 'error-if-not-integer-zero-or-greater';
+import {errorIfLengthIsZero} from 'error-if-length-is-zero';
+import {getRoundedDown} from '@writetome51/get-rounded-up-down';
+import {isInteger} from '@writetome51/is-integer-is-float';
 
 
-export function getRandomInteger([min, max]): number {
+export function getRandomInteger([min, max]) {
 	errorIfLengthIsZero(arguments[0]);
 	if (!(isInteger(min)) || !(isInteger(max))) throw new Error(
 		'Both items in the range array must be integers'
@@ -17,7 +17,7 @@ export function getRandomInteger([min, max]): number {
 }
 
 
-export function getRandomIntegers(howMany, [min, max]): number[] {
+export function getRandomIntegers(howMany, [min, max]) {
 	errorIfNotIntegerZeroOrGreater(howMany);
 
 	let randomIntegers = [];
