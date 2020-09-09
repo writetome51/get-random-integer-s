@@ -10,10 +10,8 @@ try {
 catch (e) {
     errorTriggered = true;
 }
-if (errorTriggered)
-    console.log('test 1 passed');
-else
-    console.log('test 1 failed');
+if (errorTriggered) console.log('test 1 passed');
+else console.log('test 1 failed');
 
 
 // Test 2: Make sure error is triggered if array items are not both numbers:
@@ -36,10 +34,8 @@ try {
 catch (e) {
     ++errorsTriggered;
 }
-if (errorsTriggered === 3)
-    console.log('test 2 passed');
-else
-    console.log('test 2 failed');
+if (errorsTriggered === 3) console.log('test 2 passed');
+else console.log('test 2 failed');
 
 
 // Test 3: Make sure error is triggered if first number is greater than the second:
@@ -93,7 +89,7 @@ results = [];
 while (++i < randomIntegers.length) {
     results.push(inRange([-100, 100], randomIntegers[i]));
 }
-if (results.length === randomIntegers.length && !results.includes(false) && !results.includes(undefined))
+if (results.length === randomIntegers.length && !(results.includes(false)) && !(results.includes(undefined)))
     console.log('test 6 passed');
 else
     console.log('test 6 FAILED');
@@ -106,7 +102,20 @@ results = [];
 while (++i < randomIntegers.length) {
     results.push(inRange([-1000000, Number.MAX_VALUE], randomIntegers[i]));
 }
-if (results.length === randomIntegers.length && !results.includes(false) && !results.includes(undefined))
+if (results.length === randomIntegers.length && !(results.includes(false)) && !(results.includes(undefined)))
     console.log('test 7 passed');
 else
     console.log('test 7 FAILED');
+
+
+console.log(getRandomInteger([-5, 5]));
+// 3
+
+console.log(getRandomIntegers(5, [-5, 5]));
+// [ -2, 1, -2, -3, 1 ]
+
+console.log(getRandomInteger([0, 10]));
+// 1
+
+console.log(getRandomIntegers(5, [0, 10]));
+// [ 3, 1, 10, 8, 3 ]

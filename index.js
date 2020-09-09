@@ -1,16 +1,15 @@
-import {errorIfNotIntegerZeroOrGreater} from 'error-if-not-integer-zero-or-greater';
-import {errorIfLengthIsZero} from 'error-if-length-is-zero';
+import {getArrFilled} from '@writetome51/get-arr-filled';
 import {getRoundedDown} from '@writetome51/get-rounded-up-down';
 import {isInteger} from '@writetome51/is-integer-is-float';
+import {not} from '@writetome51/not';
 
 
 export function getRandomInteger([min, max]) {
-	errorIfLengthIsZero(arguments[0]);
-	if (!(isInteger(min)) || !(isInteger(max))) throw new Error(
+	if (not(isInteger(min)) || not(isInteger(max))) throw new Error(
 		'Both items in the range array must be integers'
 	);
 	if (min > max) throw new Error(
-		'In the range array, the first number must be less than or equal to the second number'
+		'In the range array, the min number must be less than or equal to the max number'
 	);
 	let totalRange = max - min + 1;
 	return getRoundedDown(Math.random() * totalRange + min);
@@ -18,9 +17,5 @@ export function getRandomInteger([min, max]) {
 
 
 export function getRandomIntegers(howMany, [min, max]) {
-	errorIfNotIntegerZeroOrGreater(howMany);
-
-	let randomIntegers = [];
-	for (let i = 0; i < howMany; ++i) randomIntegers[i] = getRandomInteger([min, max]);
-	return randomIntegers;
+	return getArrFilled(howMany, () => getRandomInteger([min, max]));
 }

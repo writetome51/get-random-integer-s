@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-random-integer-s",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "2 functions: one gives you 1 random integer within a chosen range, the other gives you many.",
   "type": "module",
   "main": "index.js",
@@ -23,9 +23,9 @@
     "@writetome51/in-range": "^2.0.0"
   },
   "dependencies": {
-    "@writetome51/is-integer-is-float": "^2.0.0",
-    "@writetome51/get-rounded-up-down": "^2.0.0",
-    "error-if-not-integer-zero-or-greater": "^2.0.0",
-    "error-if-length-is-zero": "^1.0.1"
+    "@writetome51/get-arr-filled": ">=0.0.3",
+    "@writetome51/get-rounded-up-down": ">=3.0.1",
+    "@writetome51/is-integer-is-float": ">=2.0.1",
+    "@writetome51/not": ">=2.0.0"
   }
 }

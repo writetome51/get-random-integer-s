@@ -1,16 +1,21 @@
-# getRandomInteger(range): number
+# getRandomInteger([min, max]): number
 
-# getRandomIntegers(howMany, range): number[]
+# getRandomIntegers(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;howMany,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[min, max]<br>): number[]
 
-`range` is an array of 2 numbers: [min, max]
 
 ## Examples
 ```js
-getRandomInteger([-10, 10]);
-    // returns int value anywhere from -10 to 10
+console.log(getRandomInteger([-5, 5]));
+// 3
 
-getRandomIntegers(5, [-10, 10]);
-    // returns 5 integers of value anywhere from -10 to 10
+console.log(getRandomIntegers(5, [-5, 5]));
+// [ -2, 1, -2, -3, 1 ]
+
+console.log(getRandomInteger([0, 10]));
+// 1
+
+console.log(getRandomIntegers(5, [0, 10]));
+// [ 3, 1, 10, 8, 3 ]
 ```
 
 ## Installation
