@@ -1,9 +1,10 @@
 {
   "name": "@writetome51/get-random-integer-s",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "2 functions: one gives you 1 random integer within a chosen range, the other gives you many.",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/get-random-integer-s.git"
